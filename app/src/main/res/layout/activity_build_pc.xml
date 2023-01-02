@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="40dp"
+    android:orientation="vertical"
+    tools:context=".View.Ui.BuildPc">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:padding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please Enter Your Budget"
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/budget"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:hint="Enter Amount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp">
+
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:padding="20dp"
+                android:id="@+id/components"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Motherboard :"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="20dp"
+                    android:textColor="@color/teal_700"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/motherboard"
+                    android:text="Motherboard123123"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="15dp"
+                    android:textColor="#FF5722"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Processor :"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="20dp"
+                    android:textColor="@color/teal_700"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Processor"
+                    android:text="Processor123123"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="15dp"
+                    android:textColor="#FF5722"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ram :"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="20dp"
+                    android:textColor="@color/teal_700"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Ram"
+                    android:text="Ram123123"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="15dp"
+                    android:textColor="#FF5722"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Power Supply :"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="20dp"
+                    android:textColor="@color/teal_700"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/powerSupply"
+                    android:text="PowerSupply123123"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="15dp"
+                    android:textColor="#FF5722"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Storage :"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="20dp"
+                    android:textColor="@color/teal_700"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/storage"
+                    android:text="Storage123123"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="15dp"
+                    android:textColor="#FF5722"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Graphics Card :"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="20dp"
+                    android:textColor="@color/teal_700"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/graphicsCard"
+                    android:text="GraphicsCard123123"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="15dp"
+                    android:textColor="#FF5722"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monitor :"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="20dp"
+                    android:textColor="@color/teal_700"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/monitor"
+                    android:text="Monitor123123"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="15dp"
+                    android:textColor="#FF5722"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/build"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@color/black"
+                android:elevation="0dp"
+                android:text="Build"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="14sp"
+                app:backgroundTint="#FFFFFF"
+                tools:ignore="OnClick" />
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/message"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
