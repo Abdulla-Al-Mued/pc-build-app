@@ -1,7 +1,8 @@
 # This is an Pc Building Android Application, Its different from usual pc building software that we use.Its basically build for those who are new to the technology and confuse to the all the computer components how they properly build a pc within their budget. This app does the all complexity take care by itself, for the user they just need to give the amount of budget they have and then the app will build a perfect pc for the given budget.
 
 
-<b>Technology</b><br><br>
+<b>Technology</b><br>
+
 <b>For App Building</b><br>
 1.Android Studio</br>
 2.Java<br/>
