@@ -3,7 +3,7 @@ package com.example.easybuild.Service.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Storage {
+public class Ram2 {
 
     @SerializedName("_id")
     @Expose
@@ -11,18 +11,18 @@ public class Storage {
     @SerializedName("VendorName")
     @Expose
     private String vendorName;
+    @SerializedName("MemoryType")
+    @Expose
+    private String memoryType;
+    @SerializedName("BusSpeed")
+    @Expose
+    private Integer busSpeed;
+    @SerializedName("Capacity")
+    @Expose
+    private Integer capacity;
     @SerializedName("Model")
     @Expose
     private String model;
-    @SerializedName("Type")
-    @Expose
-    private String type;
-    @SerializedName("Interface")
-    @Expose
-    private String _interface;
-    @SerializedName("Capacity")
-    @Expose
-    private String capacity;
     @SerializedName("Price")
     @Expose
     private Integer price;
@@ -43,36 +43,36 @@ public class Storage {
         this.vendorName = vendorName;
     }
 
+    public String getMemoryType() {
+        return memoryType;
+    }
+
+    public void setMemoryType(String memoryType) {
+        this.memoryType = memoryType;
+    }
+
+    public Integer getBusSpeed() {
+        return busSpeed;
+    }
+
+    public void setBusSpeed(Integer busSpeed) {
+        this.busSpeed = busSpeed;
+    }
+
+    public Integer getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(Integer capacity) {
+        this.capacity = capacity;
+    }
+
     public String getModel() {
         return model;
     }
 
     public void setModel(String model) {
         this.model = model;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getInterface() {
-        return _interface;
-    }
-
-    public void setInterface(String _interface) {
-        this._interface = _interface;
-    }
-
-    public String getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(String capacity) {
-        this.capacity = capacity;
     }
 
     public Integer getPrice() {
@@ -82,5 +82,6 @@ public class Storage {
     public void setPrice(Integer price) {
         this.price = price;
     }
+
 
 }

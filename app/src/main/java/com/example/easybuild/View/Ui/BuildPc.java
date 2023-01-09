@@ -24,9 +24,9 @@ public class BuildPc extends AppCompatActivity {
     TextInputLayout budget;
     private PcBuildViewModel pcBuildViewModel;
     Button build;
-    double motherboard, processor, ram, storage, power, monitor, totalBudget;
-    double motherboardBudget, processorBudget, ramBudget, storageBudget, powerBudget, monitorBudget;
-    TextView message, mb, pro, rm, st, ps, mon;
+    double motherboard, processor, ram, storage, power, monitor, gpu, totalBudget;
+    double motherboardBudget, processorBudget, ramBudget, storageBudget, powerBudget, monitorBudget, gpuBudget;
+    TextView message, mb, pro, rm, rm2, ssd, hdd, ps, mon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +39,15 @@ public class BuildPc extends AppCompatActivity {
         mb = findViewById(R.id.motherboard);
         pro = findViewById(R.id.Processor);
         rm = findViewById(R.id.Ram);
-        st = findViewById(R.id.storage);
+        rm2 = findViewById(R.id.Ram2);
+        ssd = findViewById(R.id.ssd);
+        hdd= findViewById(R.id.hdd);
+
         ps = findViewById(R.id.powerSupply);
         mon = findViewById(R.id.monitor);
 
 
-        motherboard = 0.13;
+        motherboard = 0.16;
         processor = 0.30;
         ram = 0.10;
         storage = 0.17;
@@ -88,25 +91,38 @@ public class BuildPc extends AppCompatActivity {
                 .observe(this, new Observer<PcBuild>() {
                     @Override
                     public void onChanged(PcBuild pcBuild) {
-                        double tp = 0;
+
 
                         if (pcBuild.getSuccess()){
 
-                            tp = +pcBuild.getMotherboard().get(0).getPrice()+pcBuild.getProcessor().get(0).getPrice()
-                                    +pcBuild.getRam().get(0).getPriceTk()+pcBuild.getStorage().get(0).getPrice()+pcBuild.getPowerSupply().get(0).getPrice()+pcBuild.getMonitor().get(0).getPrice();
+                            if (ramBudget<3600){
+                                mb.setText("Model :"+pcBuild.getMotherboard().getModel()+"\nPrice(tk) :"+pcBuild.getMotherboard().getPrice()+"\n"+motherboardBudget);
+                                pro.setText("Model :"+pcBuild.getProcessor().getModel()+"\nPrice(tk) :"+pcBuild.getProcessor().getPrice()+"\n"+processorBudget);
+                                rm.setText("Model :"+pcBuild.getRam1().getModel()+"\nPrice(tk) :"+pcBuild.getRam1().getPrice()+"\n"+ramBudget);
+                                ssd.setText("Model :"+pcBuild.getSsd().getModel()+"\nPrice(tk) :"+pcBuild.getSsd().getPrice()+"\n"+storageBudget);
+                                hdd.setText("Model :"+pcBuild.getHdd().getModel()+"\nPrice(tk) :"+pcBuild.getHdd().getPrice()+"\n"+storageBudget);
+                                ps.setText("Model :"+pcBuild.getPowersupply().getModel()+"\nPrice(tk) :"+pcBuild.getPowersupply().getPrice()+"\n"+powerBudget);
+                                mon.setText("Model :"+pcBuild.getMonitor().getModel()+"\nPrice(tk) :"+pcBuild.getMonitor().getPrice()+"\n"+monitorBudget);
 
-                            mb.setText("Model :"+pcBuild.getMotherboard().get(0).getModel()+"\nPrice(tk) :"+pcBuild.getMotherboard().get(0).getPrice()+"\n"+motherboardBudget);
-                            pro.setText("Model :"+pcBuild.getProcessor().get(0).getModel()+"\nPrice(tk) :"+pcBuild.getProcessor().get(0).getPrice()+"\n"+processorBudget);
-                            rm.setText("Model :"+pcBuild.getRam().get(0).getModel()+"\nPrice(tk) :"+pcBuild.getRam().get(0).getPriceTk()+"\n"+ramBudget);
-                            st.setText("Model :"+pcBuild.getStorage().get(0).getModel()+"\nPrice(tk) :"+pcBuild.getStorage().get(0).getPrice()+"\n"+storageBudget);
-                            ps.setText("Model :"+pcBuild.getPowerSupply().get(0).getModel()+"\nPrice(tk) :"+pcBuild.getPowerSupply().get(0).getPrice()+"\n"+powerBudget);
-                            mon.setText("Model :"+pcBuild.getMonitor().get(0).getModel()+"\nPrice(tk) :"+pcBuild.getMonitor().get(0).getPrice()+"\n"+monitorBudget);
+                            }
+                            else {
+
+                                mb.setText("Model :"+pcBuild.getMotherboard().getModel()+"\nPrice(tk) :"+pcBuild.getMotherboard().getPrice()+"\n"+motherboardBudget);
+                                pro.setText("Model :"+pcBuild.getProcessor().getModel()+"\nPrice(tk) :"+pcBuild.getProcessor().getPrice()+"\n"+processorBudget);
+                                rm.setText("Model :"+pcBuild.getRam1().getModel()+"\nPrice(tk) :"+pcBuild.getRam1().getPrice()+"\n"+ramBudget);
+                                rm2.setText("Model :"+pcBuild.getRam2().getModel()+"\nPrice(tk) :"+pcBuild.getRam2().getPrice()+"\n"+ramBudget);
+                                ssd.setText("Model :"+pcBuild.getSsd().getModel()+"\nPrice(tk) :"+pcBuild.getSsd().getPrice()+"\n"+storageBudget);
+                                hdd.setText("Model :"+pcBuild.getHdd().getModel()+"\nPrice(tk) :"+pcBuild.getHdd().getPrice()+"\n"+storageBudget);
+                                ps.setText("Model :"+pcBuild.getPowersupply().getModel()+"\nPrice(tk) :"+pcBuild.getPowersupply().getPrice()+"\n"+powerBudget);
+                                mon.setText("Model :"+pcBuild.getMonitor().getModel()+"\nPrice(tk) :"+pcBuild.getMonitor().getPrice()+"\n"+monitorBudget);
+
+                            }
 
                         }
 
 
 
-                        message.setText(pcBuild.getMsg()+"\n total :"+tp);
+                        message.setText(pcBuild.getMsg()+"\n total :"+pcBuild.getTotalBudget());
 
                     }
                 });

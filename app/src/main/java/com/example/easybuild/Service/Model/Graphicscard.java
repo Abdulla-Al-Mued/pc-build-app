@@ -3,7 +3,7 @@ package com.example.easybuild.Service.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class PowerSupply {
+public class Graphicscard {
 
     @SerializedName("_id")
     @Expose
@@ -14,9 +14,15 @@ public class PowerSupply {
     @SerializedName("Model")
     @Expose
     private String model;
-    @SerializedName("PowerInW")
+    @SerializedName("Type")
     @Expose
-    private Integer powerInW;
+    private String type;
+    @SerializedName("Capacity")
+    @Expose
+    private String capacity;
+    @SerializedName("Resolution")
+    @Expose
+    private String resolution;
     @SerializedName("Price")
     @Expose
     private Integer price;
@@ -45,12 +51,28 @@ public class PowerSupply {
         this.model = model;
     }
 
-    public Integer getPowerInW() {
-        return powerInW;
+    public String getType() {
+        return type;
     }
 
-    public void setPowerInW(Integer powerInW) {
-        this.powerInW = powerInW;
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(String capacity) {
+        this.capacity = capacity;
+    }
+
+    public String getResolution() {
+        return resolution;
+    }
+
+    public void setResolution(String resolution) {
+        this.resolution = resolution;
     }
 
     public Integer getPrice() {
@@ -60,5 +82,6 @@ public class PowerSupply {
     public void setPrice(Integer price) {
         this.price = price;
     }
+
 
 }

@@ -3,29 +3,29 @@ package com.example.easybuild.Service.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Ram {
+public class Ram1 {
 
     @SerializedName("_id")
     @Expose
     private String id;
-    @SerializedName("Vendor Name")
+    @SerializedName("VendorName")
     @Expose
     private String vendorName;
-    @SerializedName("Memory Type")
+    @SerializedName("MemoryType")
     @Expose
     private String memoryType;
-    @SerializedName("Bus Speed(Mhz)")
+    @SerializedName("BusSpeed")
     @Expose
-    private Integer busSpeedMhz;
-    @SerializedName("Capacity(GB)")
+    private Integer busSpeed;
+    @SerializedName("Capacity")
     @Expose
-    private Integer capacityGB;
+    private Integer capacity;
     @SerializedName("Model")
     @Expose
     private String model;
-    @SerializedName("Price(tk)")
+    @SerializedName("Price")
     @Expose
-    private Integer priceTk;
+    private Integer price;
 
     public String getId() {
         return id;
@@ -51,20 +51,20 @@ public class Ram {
         this.memoryType = memoryType;
     }
 
-    public Integer getBusSpeedMhz() {
-        return busSpeedMhz;
+    public Integer getBusSpeed() {
+        return busSpeed;
     }
 
-    public void setBusSpeedMhz(Integer busSpeedMhz) {
-        this.busSpeedMhz = busSpeedMhz;
+    public void setBusSpeed(Integer busSpeed) {
+        this.busSpeed = busSpeed;
     }
 
-    public Integer getCapacityGB() {
-        return capacityGB;
+    public Integer getCapacity() {
+        return capacity;
     }
 
-    public void setCapacityGB(Integer capacityGB) {
-        this.capacityGB = capacityGB;
+    public void setCapacity(Integer capacity) {
+        this.capacity = capacity;
     }
 
     public String getModel() {
@@ -75,12 +75,12 @@ public class Ram {
         this.model = model;
     }
 
-    public Integer getPriceTk() {
-        return priceTk;
+    public Integer getPrice() {
+        return price;
     }
 
-    public void setPriceTk(Integer priceTk) {
-        this.priceTk = priceTk;
+    public void setPrice(Integer price) {
+        this.price = price;
     }
 
 }

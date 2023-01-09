@@ -17,21 +17,18 @@ public class Motherboard {
     @SerializedName("MemoryType")
     @Expose
     private String memoryType;
-    @SerializedName("MemorySlots ")
+    @SerializedName("MemorySlots")
     @Expose
     private Integer memorySlots;
-    @SerializedName("MaxMemory (GB)")
+    @SerializedName("MaxMemory")
     @Expose
-    private Integer maxMemoryGB;
+    private Integer maxMemory;
     @SerializedName("Price")
     @Expose
     private Integer price;
     @SerializedName("SupportedCPU")
     @Expose
     private String supportedCPU;
-    @SerializedName("Gen")
-    @Expose
-    private Integer gen;
 
     public String getId() {
         return id;
@@ -73,12 +70,12 @@ public class Motherboard {
         this.memorySlots = memorySlots;
     }
 
-    public Integer getMaxMemoryGB() {
-        return maxMemoryGB;
+    public Integer getMaxMemory() {
+        return maxMemory;
     }
 
-    public void setMaxMemoryGB(Integer maxMemoryGB) {
-        this.maxMemoryGB = maxMemoryGB;
+    public void setMaxMemory(Integer maxMemory) {
+        this.maxMemory = maxMemory;
     }
 
     public Integer getPrice() {
@@ -97,12 +94,5 @@ public class Motherboard {
         this.supportedCPU = supportedCPU;
     }
 
-    public Integer getGen() {
-        return gen;
-    }
-
-    public void setGen(Integer gen) {
-        this.gen = gen;
-    }
 
 }

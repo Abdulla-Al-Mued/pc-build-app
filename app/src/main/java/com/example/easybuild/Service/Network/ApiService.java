@@ -22,7 +22,7 @@ public interface ApiService {
             @Body User body
     );
 
-    @GET("getpc")
+    @GET("getpc2")
     Call<PcBuild> buildPc(
             @Query("mb") double motherBoard,
             @Query("pros") double processor,

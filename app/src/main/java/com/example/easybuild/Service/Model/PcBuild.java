@@ -13,24 +13,36 @@ public class PcBuild {
     @SerializedName("msg")
     @Expose
     private String msg;
+    @SerializedName("totalBudget")
+    @Expose
+    private Integer totalBudget;
     @SerializedName("MOTHERBOARD")
     @Expose
-    private List<Motherboard> motherboard = null;
-    @SerializedName("RAM")
+    private Motherboard motherboard;
+    @SerializedName("RAM1")
     @Expose
-    private List<Ram> ram = null;
+    private Ram1 ram1;
+    @SerializedName("RAM2")
+    @Expose
+    private Ram2 ram2;
     @SerializedName("PROCESSOR")
     @Expose
-    private List<Processor> processor = null;
+    private Processor processor;
     @SerializedName("POWERSUPPLY")
     @Expose
-    private List<PowerSupply> powerSupply = null;
-    @SerializedName("STORAGE")
+    private Powersupply powersupply;
+    @SerializedName("SSD")
     @Expose
-    private List<Storage> storage = null;
+    private Ssd ssd;
+    @SerializedName("HDD")
+    @Expose
+    private Hdd hdd;
+    @SerializedName("GRAPHICSCARD")
+    @Expose
+    private Graphicscard graphicscard;
     @SerializedName("MONITOR")
     @Expose
-    private List<Monitor> monitor = null;
+    private Monitor monitor;
 
     public Boolean getSuccess() {
         return success;
@@ -48,51 +60,83 @@ public class PcBuild {
         this.msg = msg;
     }
 
-    public List<Motherboard> getMotherboard() {
+    public Integer getTotalBudget() {
+        return totalBudget;
+    }
+
+    public void setTotalBudget(Integer totalBudget) {
+        this.totalBudget = totalBudget;
+    }
+
+    public Motherboard getMotherboard() {
         return motherboard;
     }
 
-    public void setMotherboard(List<Motherboard> motherboard) {
+    public void setMotherboard(Motherboard motherboard) {
         this.motherboard = motherboard;
     }
 
-    public List<Ram> getRam() {
-        return ram;
+    public Ram1 getRam1() {
+        return ram1;
     }
 
-    public void setRam(List<Ram> ram) {
-        this.ram = ram;
+    public void setRam1(Ram1 ram1) {
+        this.ram1 = ram1;
     }
 
-    public List<Processor> getProcessor() {
+    public Ram2 getRam2() {
+        return ram2;
+    }
+
+    public void setRam2(Ram2 ram2) {
+        this.ram2 = ram2;
+    }
+
+    public Processor getProcessor() {
         return processor;
     }
 
-    public void setProcessor(List<Processor> processor) {
+    public void setProcessor(Processor processor) {
         this.processor = processor;
     }
 
-    public List<PowerSupply> getPowerSupply() {
-        return powerSupply;
+    public Powersupply getPowersupply() {
+        return powersupply;
     }
 
-    public void setPowerSupply(List<PowerSupply> powerSupply) {
-        this.powerSupply = powerSupply;
+    public void setPowersupply(Powersupply powersupply) {
+        this.powersupply = powersupply;
     }
 
-    public List<Storage> getStorage() {
-        return storage;
+    public Ssd getSsd() {
+        return ssd;
     }
 
-    public void setStorage(List<Storage> storage) {
-        this.storage = storage;
+    public void setSsd(Ssd ssd) {
+        this.ssd = ssd;
     }
 
-    public List<Monitor> getMonitor() {
+    public Hdd getHdd() {
+        return hdd;
+    }
+
+    public void setHdd(Hdd hdd) {
+        this.hdd = hdd;
+    }
+
+    public Graphicscard getGraphicscard() {
+        return graphicscard;
+    }
+
+    public void setGraphicscard(Graphicscard graphicscard) {
+        this.graphicscard = graphicscard;
+    }
+
+    public Monitor getMonitor() {
         return monitor;
     }
 
-    public void setMonitor(List<Monitor> monitor) {
+    public void setMonitor(Monitor monitor) {
         this.monitor = monitor;
     }
 

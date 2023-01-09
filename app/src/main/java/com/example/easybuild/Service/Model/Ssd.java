@@ -3,7 +3,7 @@ package com.example.easybuild.Service.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Processor {
+public class Ssd {
 
     @SerializedName("_id")
     @Expose
@@ -14,18 +14,15 @@ public class Processor {
     @SerializedName("Model")
     @Expose
     private String model;
-    @SerializedName("Cores")
+    @SerializedName("Type")
     @Expose
-    private Integer cores;
-    @SerializedName("Threads")
+    private String type;
+    @SerializedName("Interface")
     @Expose
-    private Integer threads;
-    @SerializedName("Series")
+    private String _interface;
+    @SerializedName("Capacity")
     @Expose
-    private Integer series;
-    @SerializedName("VideoRam")
-    @Expose
-    private String videoRam;
+    private String capacity;
     @SerializedName("Price")
     @Expose
     private Integer price;
@@ -54,36 +51,28 @@ public class Processor {
         this.model = model;
     }
 
-    public Integer getCores() {
-        return cores;
+    public String getType() {
+        return type;
     }
 
-    public void setCores(Integer cores) {
-        this.cores = cores;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public Integer getThreads() {
-        return threads;
+    public String getInterface() {
+        return _interface;
     }
 
-    public void setThreads(Integer threads) {
-        this.threads = threads;
+    public void setInterface(String _interface) {
+        this._interface = _interface;
     }
 
-    public Integer getSeries() {
-        return series;
+    public String getCapacity() {
+        return capacity;
     }
 
-    public void setSeries(Integer series) {
-        this.series = series;
-    }
-
-    public String getVideoRam() {
-        return videoRam;
-    }
-
-    public void setVideoRam(String videoRam) {
-        this.videoRam = videoRam;
+    public void setCapacity(String capacity) {
+        this.capacity = capacity;
     }
 
     public Integer getPrice() {

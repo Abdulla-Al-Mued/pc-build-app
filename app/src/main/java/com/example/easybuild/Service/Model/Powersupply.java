@@ -3,7 +3,7 @@ package com.example.easybuild.Service.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Processor {
+public class Powersupply {
 
     @SerializedName("_id")
     @Expose
@@ -14,18 +14,9 @@ public class Processor {
     @SerializedName("Model")
     @Expose
     private String model;
-    @SerializedName("Cores")
+    @SerializedName("PowerInW")
     @Expose
-    private Integer cores;
-    @SerializedName("Threads")
-    @Expose
-    private Integer threads;
-    @SerializedName("Series")
-    @Expose
-    private Integer series;
-    @SerializedName("VideoRam")
-    @Expose
-    private String videoRam;
+    private Integer powerInW;
     @SerializedName("Price")
     @Expose
     private Integer price;
@@ -54,36 +45,12 @@ public class Processor {
         this.model = model;
     }
 
-    public Integer getCores() {
-        return cores;
+    public Integer getPowerInW() {
+        return powerInW;
     }
 
-    public void setCores(Integer cores) {
-        this.cores = cores;
-    }
-
-    public Integer getThreads() {
-        return threads;
-    }
-
-    public void setThreads(Integer threads) {
-        this.threads = threads;
-    }
-
-    public Integer getSeries() {
-        return series;
-    }
-
-    public void setSeries(Integer series) {
-        this.series = series;
-    }
-
-    public String getVideoRam() {
-        return videoRam;
-    }
-
-    public void setVideoRam(String videoRam) {
-        this.videoRam = videoRam;
+    public void setPowerInW(Integer powerInW) {
+        this.powerInW = powerInW;
     }
 
     public Integer getPrice() {
