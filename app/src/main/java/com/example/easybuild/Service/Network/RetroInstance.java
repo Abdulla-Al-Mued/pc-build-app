@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetroInstance {
 
     public static Retrofit instance = null;
-    public static String BASE_URL = "http://192.168.10.216:3005/api/";
+    public static String BASE_URL = "https://easybuild.onrender.com/api/";
 
     public static Retrofit getRetroInstance(){
 

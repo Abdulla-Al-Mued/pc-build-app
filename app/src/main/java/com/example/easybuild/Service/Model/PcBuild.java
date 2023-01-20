@@ -3,9 +3,10 @@ package com.example.easybuild.Service.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class PcBuild {
+public class PcBuild implements Serializable {
 
     @SerializedName("success")
     @Expose
