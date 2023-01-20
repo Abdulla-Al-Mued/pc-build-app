@@ -24,4 +24,9 @@ public class PcBuildViewModel extends AndroidViewModel {
         return pcBuildRepository.getPc(motherBoard, processor, ram, storage, powerSupply, monitor);
     }
 
+    public LiveData<PcBuild> buildPcWithGpu(double motherBoard, double processor, double ram,
+                                     double storage, double powerSupply, double monitor, double gpu){
+        return pcBuildRepository.getPcWithGpu(motherBoard, processor, ram, storage, powerSupply, monitor, gpu);
+    }
+
 }

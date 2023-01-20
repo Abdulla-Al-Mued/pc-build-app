@@ -201,26 +201,35 @@
                     android:textColor="#FF5722"
                     android:textStyle="bold"
                     />
-                <TextView
-                    android:layout_marginTop="20dp"
+                <LinearLayout
+                    android:id="@+id/gpuLayout"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Graphics Card :"
-                    android:fontFamily="sans-serif-condensed"
-                    android:textSize="20dp"
-                    android:textColor="@color/teal_700"
-                    android:textStyle="bold"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/graphicsCard"
-                    android:text="GraphicsCard123123"
-                    android:fontFamily="sans-serif-condensed"
-                    android:textSize="15dp"
-                    android:textColor="#FF5722"
-                    android:textStyle="bold"
-                    />
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Graphics Card :"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="20dp"
+                        android:textColor="@color/teal_700"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/graphicsCard"
+                        android:text="No Graphics card available"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="15dp"
+                        android:textColor="#FF5722"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
                 <TextView
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"

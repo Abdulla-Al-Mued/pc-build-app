@@ -13,13 +13,12 @@ import com.example.easybuild.Service.Network.RetroInstance;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.Query;
 
 public class PcBuildRepository {
 
     private static PcBuildRepository instance = null;
     private static Context context;
-    private static MutableLiveData<PcBuild> allComponent;
+    private static MutableLiveData<PcBuild> allComponent, allComponent2;
 
     public static PcBuildRepository getInstance(Context ctx){
 
@@ -63,6 +62,39 @@ public class PcBuildRepository {
 
 
         return allComponent;
+    }
+
+    public LiveData<PcBuild> getPcWithGpu(double motherBoard, double processor, double ram,
+                                   double storage, double powerSupply, double monitor, double gpu){
+
+        if (allComponent2 == null){
+            allComponent2 = new MutableLiveData<>();
+        }
+
+        ApiService apiService = RetroInstance.getRetroInstance().create(ApiService.class);
+        Call<PcBuild> call = apiService.buildPcWithGPu(motherBoard, processor, ram, storage, powerSupply, monitor, gpu);
+        call.enqueue(new Callback<PcBuild>() {
+            @Override
+            public void onResponse(Call<PcBuild> call, Response<PcBuild> response) {
+                if (response.body() != null){
+
+                    allComponent2.postValue(response.body());
+
+                }
+                else
+                    Toast.makeText(context, "Data not found", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<PcBuild> call, Throwable t) {
+
+                Toast.makeText(context, t.getMessage(), Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+
+        return allComponent2;
     }
 
 

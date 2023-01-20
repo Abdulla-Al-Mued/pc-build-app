@@ -2,6 +2,7 @@ package com.example.easybuild.Service.Network;
 
 import com.example.easybuild.Service.Model.PcBuild;
 import com.example.easybuild.Service.Model.RegisterResponse;
+import com.example.easybuild.Service.Model.Root;
 import com.example.easybuild.Service.Model.User;
 
 import retrofit2.Call;
@@ -31,5 +32,19 @@ public interface ApiService {
             @Query("ps") double powerSupply,
             @Query("monitor") double monitor
     );
+
+    @GET("getpcwithgpu")
+    Call<PcBuild> buildPcWithGPu(
+            @Query("mb") double motherBoard,
+            @Query("pros") double processor,
+            @Query("ram") double ram,
+            @Query("st") double storage,
+            @Query("ps") double powerSupply,
+            @Query("monitor") double monitor,
+            @Query("gpu") double gpu
+    );
+
+    @GET("motherboard")
+    Call<Root> allMotherboard();
 
 }
