@@ -32,6 +32,17 @@ public class Motherboard implements Serializable {
     @Expose
     private String supportedCPU;
 
+
+    public Motherboard(String vendorName, String model, String memoryType, Integer memorySlots, Integer maxMemory, Integer price, String supportedCPU) {
+        this.vendorName = vendorName;
+        this.model = model;
+        this.memoryType = memoryType;
+        this.memorySlots = memorySlots;
+        this.maxMemory = maxMemory;
+        this.price = price;
+        this.supportedCPU = supportedCPU;
+    }
+
     public String getId() {
         return id;
     }

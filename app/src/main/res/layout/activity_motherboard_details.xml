@@ -51,6 +51,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:hint="Vendor Name"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -70,6 +71,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:hint="Model"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -91,6 +93,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
             android:textColor="#fff"
+            android:hint="Memory Type"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -110,6 +113,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:hint="Memory Slots"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -128,6 +132,7 @@
             android:id="@+id/maxMemory"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
+            android:hint="Max Memory"
             android:layout_height="60dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -148,13 +153,13 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
+            android:hint="Price"
             android:textColor="#fff"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
                 android:textSize="14sp"
                 app:backgroundTint="@color/white">
 
@@ -170,6 +175,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
+            android:hint="Supported Cpu"
             android:textColor="#fff">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -183,6 +189,50 @@
 
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            >
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+                <Button
+                    android:id="@+id/cancel"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cancel"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_marginLeft="50dp"
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="delete"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
 
 
