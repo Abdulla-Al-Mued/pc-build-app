@@ -10,21 +10,71 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.easybuild.MainActivity;
 import com.example.easybuild.R;
 
 public class Component extends AppCompatActivity {
+
+    CardView motherBoard, processor, ram, powerSupply, storage, graphicsCard, monitor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_component);
 
-        CardView cardView = findViewById(R.id.motherboard);
-        cardView.setOnClickListener(new View.OnClickListener() {
+        motherBoard = findViewById(R.id.motherboard);
+        processor = findViewById(R.id.processor);
+        ram = findViewById(R.id.ram);
+        powerSupply = findViewById(R.id.powerSupply);
+        storage = findViewById(R.id.storage);
+        graphicsCard = findViewById(R.id.graphicsCard);
+        monitor = findViewById(R.id.monitor);
+
+        motherBoard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), MotherBoard.class));
+            }
+        });
+
+        processor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Processor.class));
+            }
+        });
+
+        ram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Ram.class));
+            }
+        });
+
+        storage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Storage.class));
+            }
+        });
+
+        powerSupply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PowerSupply.class));
+            }
+        });
+
+        graphicsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), GraphicsCard.class));
+            }
+        });
+
+        monitor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Monitor.class));
             }
         });
 
