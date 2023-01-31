@@ -1,6 +1,5 @@
 package com.example.easybuild.View.Ui;
 
-import static android.system.Os.remove;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;

@@ -5,6 +5,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.easybuild.Service.Model.RegisterResponse;
 import com.example.easybuild.Service.Model.User;
+import com.example.easybuild.View.Ui.BuildPc;
 import com.example.easybuild.View.Ui.SignUp;
 import com.example.easybuild.ViewModel.AuthViewModel;
 import com.google.android.material.textfield.TextInputLayout;
@@ -74,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
             public void onChanged(RegisterResponse registerResponse) {
                 if (registerResponse.getSuccess()){
                     Toast.makeText(getApplicationContext(), "Log IN success", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), BuildPc.class));
+
+                    SharedPreferences sp = getSharedPreferences("datafile",MODE_PRIVATE);
+                    SharedPreferences.Editor ed = sp.edit();
+                    ed.putString("email",Email);
+                    ed.commit();
                 }
                 message.setText(registerResponse.getMsg());
             }

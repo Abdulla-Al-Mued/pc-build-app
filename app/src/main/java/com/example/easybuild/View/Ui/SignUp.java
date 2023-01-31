@@ -5,6 +5,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -80,6 +81,11 @@ public class SignUp extends AppCompatActivity {
             public void onChanged(RegisterResponse registerResponse) {
                 if (registerResponse.getSuccess()){
                     Toast.makeText(getApplicationContext(), "Log IN success", Toast.LENGTH_LONG).show();
+
+                    SharedPreferences sp = getSharedPreferences("datafile",MODE_PRIVATE);
+                    SharedPreferences.Editor ed = sp.edit();
+                    ed.putString("email",Email);
+                    ed.commit();
                 }
                 message.setText(registerResponse.getMsg());
             }
