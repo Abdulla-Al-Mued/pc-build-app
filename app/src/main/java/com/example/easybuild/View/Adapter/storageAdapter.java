@@ -1,6 +1,7 @@
 package com.example.easybuild.View.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.easybuild.R;
+import com.example.easybuild.Service.Model.Ram1;
 import com.example.easybuild.Service.Model.Ssd;
+import com.example.easybuild.View.Ui.Ram;
+import com.example.easybuild.View.Ui.Storage;
+import com.example.easybuild.View.Ui.StorageDetails;
 
 import java.util.List;
 
@@ -40,12 +45,25 @@ public class storageAdapter extends RecyclerView.Adapter<storageAdapter.ViewHold
         return storages.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView component;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             component = itemView.findViewById(R.id.motherboard);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+
+            Ssd product = storages.get(getAdapterPosition());
+            Intent intent = new Intent(context, StorageDetails.class);
+            intent.putExtra("product", product);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
+
         }
     }
 }

@@ -3,7 +3,9 @@ package com.example.easybuild.Service.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Ssd {
+import java.io.Serializable;
+
+public class Ssd implements Serializable {
 
     @SerializedName("_id")
     @Expose

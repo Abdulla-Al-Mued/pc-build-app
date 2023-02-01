@@ -44,6 +44,7 @@ public class MotherboardDetails extends AppCompatActivity {
         btn = findViewById(R.id.editBtn);
         relativeLayout = findViewById(R.id.relativeLayout);
         linearLayout = findViewById(R.id.edit);
+
         vendorName = findViewById(R.id.vendorName);
         model = findViewById(R.id.model);
         memoryType = findViewById(R.id.memoryType);
@@ -51,6 +52,7 @@ public class MotherboardDetails extends AppCompatActivity {
         maxMemory = findViewById(R.id.maxMemory);
         price = findViewById(R.id.price);
         supportedCpu = findViewById(R.id.supportedCPU);
+
         cancel = findViewById(R.id.cancel);
         update = findViewById(R.id.update);
         remove = findViewById(R.id.delete);

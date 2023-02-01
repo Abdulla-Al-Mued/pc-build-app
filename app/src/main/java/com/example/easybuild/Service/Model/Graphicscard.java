@@ -3,7 +3,9 @@ package com.example.easybuild.Service.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Graphicscard {
+import java.io.Serializable;
+
+public class Graphicscard implements Serializable {
 
     @SerializedName("_id")
     @Expose
@@ -26,6 +28,15 @@ public class Graphicscard {
     @SerializedName("Price")
     @Expose
     private Integer price;
+
+    public Graphicscard(String vendorName, String model, String type, String capacity, String resolution, Integer price) {
+        this.vendorName = vendorName;
+        this.model = model;
+        this.type = type;
+        this.capacity = capacity;
+        this.resolution = resolution;
+        this.price = price;
+    }
 
     public String getId() {
         return id;

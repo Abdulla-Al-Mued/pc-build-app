@@ -1,6 +1,7 @@
 package com.example.easybuild.View.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.easybuild.R;
+import com.example.easybuild.Service.Model.Graphicscard;
 import com.example.easybuild.Service.Model.Monitor;
+import com.example.easybuild.View.Ui.GraphicsCardDetails;
+import com.example.easybuild.View.Ui.MonitorDetails;
 
 import java.util.List;
 
@@ -42,12 +46,25 @@ public class monitorAdapter extends RecyclerView.Adapter<monitorAdapter.ViewHold
         return monitors.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView component;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             component = itemView.findViewById(R.id.motherboard);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+
+            Monitor product = monitors.get(getAdapterPosition());
+            Intent intent = new Intent(context, MonitorDetails.class);
+            intent.putExtra("product", product);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
+
         }
     }
 

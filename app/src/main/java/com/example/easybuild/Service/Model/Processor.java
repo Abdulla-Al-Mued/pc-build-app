@@ -3,7 +3,9 @@ package com.example.easybuild.Service.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Processor {
+import java.io.Serializable;
+
+public class Processor implements Serializable {
 
     @SerializedName("_id")
     @Expose
