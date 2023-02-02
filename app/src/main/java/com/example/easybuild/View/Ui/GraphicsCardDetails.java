@@ -17,6 +17,8 @@ import com.example.easybuild.ViewModel.GraphicsCardViewModel;
 import com.example.easybuild.ViewModel.MotherboardViewModel;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.Objects;
+
 public class GraphicsCardDetails extends AppCompatActivity {
 
     Graphicscard graphicscard;
@@ -61,7 +63,7 @@ public class GraphicsCardDetails extends AppCompatActivity {
         Type.getEditText().setText(graphicscard.getType());
         capacity.getEditText().setText(graphicscard.getCapacity());
         resolution.getEditText().setText(graphicscard.getResolution());
-        price.getEditText().setText(graphicscard.getPrice());
+        Objects.requireNonNull(price.getEditText()).setText(graphicscard.getPrice().toString());
 
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +73,14 @@ public class GraphicsCardDetails extends AppCompatActivity {
                 linearLayout.setVisibility(View.VISIBLE);
                 relativeLayout.setVisibility(View.GONE);
 
+            }
+        });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearLayout.setVisibility(View.GONE);
+                relativeLayout.setVisibility(View.VISIBLE);
             }
         });
 

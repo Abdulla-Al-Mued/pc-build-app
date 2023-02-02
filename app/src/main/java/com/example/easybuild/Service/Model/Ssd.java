@@ -29,6 +29,15 @@ public class Ssd implements Serializable {
     @Expose
     private Integer price;
 
+    public Ssd(String vendorName, String model, String type, String _interface, String capacity, Integer price) {
+        this.vendorName = vendorName;
+        this.model = model;
+        this.type = type;
+        this._interface = _interface;
+        this.capacity = capacity;
+        this.price = price;
+    }
+
     public String getId() {
         return id;
     }

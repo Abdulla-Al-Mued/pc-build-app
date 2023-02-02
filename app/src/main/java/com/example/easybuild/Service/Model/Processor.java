@@ -32,6 +32,16 @@ public class Processor implements Serializable {
     @Expose
     private Integer price;
 
+    public Processor(String vendorName, String model, Integer cores, Integer threads, Integer series, String videoRam, Integer price) {
+        this.vendorName = vendorName;
+        this.model = model;
+        this.cores = cores;
+        this.threads = threads;
+        this.series = series;
+        this.videoRam = videoRam;
+        this.price = price;
+    }
+
     public String getId() {
         return id;
     }

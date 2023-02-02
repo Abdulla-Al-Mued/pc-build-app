@@ -84,6 +84,14 @@ public class MotherboardDetails extends AppCompatActivity {
             }
         });
 
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearLayout.setVisibility(View.GONE);
+                relativeLayout.setVisibility(View.VISIBLE);
+            }
+        });
+
 
         remove.setOnClickListener(new View.OnClickListener() {
             @Override

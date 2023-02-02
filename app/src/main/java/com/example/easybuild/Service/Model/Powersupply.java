@@ -23,6 +23,14 @@ public class Powersupply implements Serializable {
     @Expose
     private Integer price;
 
+
+    public Powersupply(String vendorName, String model, Integer powerInW, Integer price) {
+        this.vendorName = vendorName;
+        this.model = model;
+        this.powerInW = powerInW;
+        this.price = price;
+    }
+
     public String getId() {
         return id;
     }

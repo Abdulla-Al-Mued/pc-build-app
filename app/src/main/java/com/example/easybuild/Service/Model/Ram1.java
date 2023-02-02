@@ -29,6 +29,15 @@ public class Ram1 implements Serializable {
     @Expose
     private Integer price;
 
+    public Ram1(String vendorName, String memoryType, Integer busSpeed, Integer capacity, String model, Integer price) {
+        this.vendorName = vendorName;
+        this.memoryType = memoryType;
+        this.busSpeed = busSpeed;
+        this.capacity = capacity;
+        this.model = model;
+        this.price = price;
+    }
+
     public String getId() {
         return id;
     }

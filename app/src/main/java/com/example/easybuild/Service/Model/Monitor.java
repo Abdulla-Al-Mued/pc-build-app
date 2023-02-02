@@ -26,6 +26,14 @@ public class Monitor implements Serializable {
     @Expose
     private Integer price;
 
+    public Monitor(String vendorName, String model, String resolution, Integer displayInHz, Integer price) {
+        this.vendorName = vendorName;
+        this.model = model;
+        this.resolution = resolution;
+        this.displayInHz = displayInHz;
+        this.price = price;
+    }
+
     public String getId() {
         return id;
     }
